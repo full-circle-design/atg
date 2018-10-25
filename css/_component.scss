@@ -13,6 +13,8 @@
   }
 }
 
+// Navicon
+
 $tcon-size: 40px !default;
 $tcon-transition: .3s !default;
 $tcon-jstransform: 'tcon-transform' !default;
@@ -47,7 +49,7 @@ $tcon-menu-arrow360left-transformation: (
 
   &:hover,
   &:focus {
-    outline: none; // see issue #36 https://github.com/grayghostvisuals/transformicons/issues/36
+    outline: none;
   }
   &::-moz-focus-inner {
     border: 0;
@@ -122,7 +124,6 @@ $tcon-menu-arrow360left-transformation: (
   }
 }
 
-// see issue #7 https://github.com/grayghostvisuals/transformicons/issues/7#issuecomment-59813596
 .tcon-visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);

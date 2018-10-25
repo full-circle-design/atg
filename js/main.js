@@ -1,11 +1,11 @@
 $(document).ready(function(){
-  /*var s = skrollr.init({
+  var s = skrollr.init({
     forceHeight:false
   });
+  
   if (s.isMobile()) {
     s.destroy();
   }
-  */
 
   $('.locations-link').click(function(e){
     e.preventDefault();
@@ -38,6 +38,12 @@ $(document).ready(function(){
 
   $('.locations-link-mobile').click(function() {
     $('.navicon').click();
+  });
+
+  $(window).resize(function() {
+    if ($(window).width() > 1024 && $('.tcon').hasClass('tcon-transform')){
+     $('.navicon').click();
+    }
   });
 
 });

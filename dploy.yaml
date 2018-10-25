@@ -1,0 +1,10 @@
+live:
+    scheme: ftp
+    host: advantagetruckne.com
+    port: 21
+    user: fcd@advantagetruckne.com
+    pass: c0;9zf/EHdb
+    check: true
+    path:
+        local: ../atg/
+        remote: public_html/

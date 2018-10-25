@@ -3,6 +3,7 @@ body{
   padding:0;
   font-size:18px;
   font-family: 'Work Sans', sans-serif;
+  height: 100% !important;
 }
 
 a{
@@ -87,7 +88,7 @@ header{
       flex-grow:1;
       img{
         width:200px;
-        @media screen and (max-width:768px){
+        @media screen and (max-width:1024px){
           width:170px;
         }
       }
@@ -141,11 +142,17 @@ header{
       }
     }
     .nav-item{
-      padding:$padding-mobile 0;
       text-align: center;
       border-bottom:2px solid darken($grey,5%);
       a{
         font-weight:600;
+        display:block;
+        text-align:center;
+        padding:$padding-mobile 0;
+        &:hover,
+        &:focus{
+          background:rgba(darken($grey,10%),0.5);
+        }
       }
     }
     &:after{

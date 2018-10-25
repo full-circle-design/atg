@@ -3,7 +3,8 @@ body {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  font-family: 'Work Sans', sans-serif; }
+  font-family: 'Work Sans', sans-serif;
+  height: 100% !important; }
 
 a {
   color: #00aeef;
@@ -87,7 +88,7 @@ header .content {
     flex-grow: 1; }
     header .content .logo img {
       width: 200px; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
         header .content .logo img {
           width: 170px; } }
   header .content nav {
@@ -132,11 +133,15 @@ header .nav-mobile {
       transition-delay: 0;
       transition: 2s ease-in-out; }
   header .nav-mobile .nav-item {
-    padding: 20px 0;
     text-align: center;
     border-bottom: 2px solid #d4d4d4; }
     header .nav-mobile .nav-item a {
-      font-weight: 600; }
+      font-weight: 600;
+      display: block;
+      text-align: center;
+      padding: 20px 0; }
+      header .nav-mobile .nav-item a:hover, header .nav-mobile .nav-item a:focus {
+        background: rgba(200, 200, 200, 0.5); }
   header .nav-mobile:after {
     content: '';
     display: block;
@@ -295,7 +300,8 @@ footer {
   .brands .brand {
     margin-right: 60px;
     width: 50%;
-    position: relative; }
+    position: relative;
+    transition: 0.15s ease-in-out; }
     @media screen and (min-width: 767px) and (max-width: 1023px) {
       .brands .brand {
         margin-right: 20px;
@@ -316,15 +322,21 @@ footer {
       padding-bottom: 100%;
       background-size: cover !important;
       background-position: center center; }
-    .brands .brand:hover .bg {
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%); }
+    .brands .brand:hover {
+      -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.35);
+      -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.35);
+      box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.35); }
+      .brands .brand:hover .bg {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%); }
     .brands .brand .logo-wrap {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+      padding: 0 60px;
+      box-sizing: border-box;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -332,10 +344,14 @@ footer {
       transition: 0.15s ease-in-out;
       -webkit-filter: grayscale(0);
       filter: grayscale(0); }
+      @media screen and (max-width: 768px) {
+        .brands .brand .logo-wrap {
+          padding: 0 30px; } }
       .brands .brand .logo-wrap:hover {
         background: rgba(172, 31, 45, 0.85); }
       .brands .brand .logo-wrap img {
-        z-index: 2; }
+        z-index: 2;
+        max-width: 100%; }
 
 .dealership-locations {
   padding-bottom: 30px; }
