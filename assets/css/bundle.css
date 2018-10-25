@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,500,700,900");
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif; }
+
+a {
+  color: #00aeef;
+  text-decoration: none;
+  transition: 0.15s ease-in-out; }
+  a:hover {
+    color: #0089bc; }
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #000; }
+
+h1 {
+  font-size: 52px; }
+
+h2 {
+  font-size: 48px;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 50px; }
+  h2:after {
+    content: '';
+    display: block;
+    background: #ac1f2d;
+    width: 60px;
+    height: 4px;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -30px; }
+
+h3 {
+  font-size: 24px; }
+
+.padded {
+  padding: 60px; }
+  @media screen and (max-width: 768px) {
+    .padded {
+      padding: 40px; } }
+
+.padded-top {
+  padding: 60px 0 0 0; }
+  @media screen and (max-width: 768px) {
+    .padded-top {
+      padding: 40px 0 0 0; } }
+
+.padded-bottom {
+  padding: 0 0 60px 0; }
+  @media screen and (max-width: 768px) {
+    .padded-bottom {
+      padding: 0 0 40px 0; } }
+
+.padded-2x {
+  padding: 120px; }
+
+.padded-2x-top {
+  padding: 120px 0 0 0; }
+
+.padded-2x-bottom {
+  padding: 0 0 120px 0; }
+
+.align-left {
+  text-align: left; }
+
+.align-center {
+  text-align: center; }
+
+.align-right {
+  text-align: right; }
+
+header .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+  z-index: 200;
+  background: #ffffff; }
+  header .content .logo {
+    flex-grow: 1; }
+    header .content .logo img {
+      width: 200px; }
+      @media screen and (max-width: 768px) {
+        header .content .logo img {
+          width: 170px; } }
+  header .content nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none; }
+    @media screen and (max-width: 1024px) {
+      header .content nav {
+        display: none; } }
+    header .content nav li {
+      padding-right: 30px; }
+      header .content nav li:last-child {
+        padding-right: 0; }
+      header .content nav li a {
+        font-weight: 700; }
+  header .content button {
+    display: none; }
+    @media screen and (max-width: 1024px) {
+      header .content button {
+        display: block; } }
+
+header .nav-mobile {
+  background: #ffffff;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  padding-top: 95px;
+  border-bottom: 2px solid #efefef;
+  z-index: 100;
+  transition: 0.5s ease-in-out; }
+  header .nav-mobile.open {
+    top: 0; }
+  header .nav-mobile .nav-item {
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #efefef; }
+    header .nav-mobile .nav-item a {
+      font-weight: 600; }
+
+main {
+  background: url("/atg-stage/assets/img/BG-Texture-Repeatable.png"); }
+
+footer {
+  background: #e1e1e1; }
+  footer .legal {
+    border-top: 2px solid #c8c8c8; }
+    footer .legal p {
+      margin: 0;
+      padding: 20px 0 30px;
+      font-size: 14px; }
+
+.content {
+  width: 1170px;
+  margin: 0 auto; }
+  @media screen and (max-width: 1230px) {
+    .content {
+      width: 100%;
+      padding-left: 60px;
+      padding-right: 60px;
+      box-sizing: border-box; } }
+  @media screen and (max-width: 768px) {
+    .content {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box; } }
+
+.button {
+  display: inline-block;
+  background: #ac1f2d;
+  color: #ffffff;
+  padding: 15px 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: 0.15s ease-in-out;
+  cursor: pointer; }
+  .button:hover {
+    background: #811722;
+    color: #ffffff; }
+
+.tcon {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  transition: 0.3s;
+  user-select: none;
+  width: 40px;
+  background: transparent;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent; }
+  .tcon > * {
+    display: block; }
+  .tcon:hover, .tcon:focus {
+    outline: none; }
+  .tcon::-moz-focus-inner {
+    border: 0; }
+
+.tcon-menu__lines {
+  display: inline-block;
+  height: 5.71429px;
+  width: 40px;
+  border-radius: 2.85714px;
+  transition: 0.3s;
+  background: black;
+  position: relative; }
+  .tcon-menu__lines::before, .tcon-menu__lines::after {
+    display: inline-block;
+    height: 5.71429px;
+    width: 40px;
+    border-radius: 2.85714px;
+    transition: 0.3s;
+    background: black;
+    content: '';
+    position: absolute;
+    left: 0;
+    transform-origin: 2.85714px center;
+    width: 100%; }
+  .tcon-menu__lines::before {
+    top: 10px; }
+  .tcon-menu__lines::after {
+    top: -10px; }
+  .tcon-transform .tcon-menu__lines {
+    transform: scale3d(0.8, 0.8, 0.8); }
+
+.tcon-menu--xbutterfly {
+  width: auto; }
+  .tcon-menu--xbutterfly .tcon-menu__lines::before, .tcon-menu--xbutterfly .tcon-menu__lines::after {
+    transform-origin: 50% 50%;
+    transition: top .3s .6s ease, transform .3s ease; }
+  .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines {
+    background: transparent; }
+    .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::before, .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::after {
+      top: 0;
+      transition: top .3s ease, transform .3s .5s ease;
+      width: 40px; }
+    .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::before {
+      transform: rotate3d(0, 0, 1, 45deg); }
+    .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::after {
+      transform: rotate3d(0, 0, 1, -45deg); }
+
+.tcon-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .tcon-visuallyhidden:active, .tcon-visuallyhidden:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+.hero {
+  width: 100%;
+  height: 425px;
+  background: url("/atg-stage/assets/img/Hero.jpg");
+  background-size: cover;
+  background-position: center center; }
+  @media screen and (max-width: 768px) {
+    .hero {
+      height: 350px;
+      background-position: right center; } }
+
+.brands {
+  display: flex; }
+  @media screen and (max-width: 767px) {
+    .brands {
+      display: block; } }
+  @media screen and (min-width: 767px) and (max-width: 1023px) {
+    .brands {
+      padding-bottom: 20px; } }
+  .brands .brand {
+    margin-right: 60px;
+    width: 50%;
+    position: relative; }
+    @media screen and (min-width: 767px) and (max-width: 1023px) {
+      .brands .brand {
+        margin-right: 20px;
+        margin-bottom: 0; } }
+    @media screen and (max-width: 767px) {
+      .brands .brand {
+        width: 100%;
+        margin-bottom: 30px; } }
+    .brands .brand:last-of-type {
+      margin-right: 0;
+      margin-bottom: 0; }
+    .brands .brand.brand-freightliner .bg {
+      background: url("/atg-stage/assets/img/Freightliner-Image.jpg"); }
+    .brands .brand.brand-westernstar .bg {
+      background: url("/atg-stage/assets/img/Western-Star-Image.jpg"); }
+    .brands .brand .bg {
+      width: 100%;
+      padding-bottom: 100%;
+      background-size: cover !important;
+      background-position: center center; }
+    .brands .brand:hover .bg {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%); }
+    .brands .brand .logo-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      transition: 0.15s ease-in-out;
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0); }
+      .brands .brand .logo-wrap:hover {
+        background: rgba(172, 31, 45, 0.85); }
+      .brands .brand .logo-wrap img {
+        z-index: 2; }
+
+.dealership-locations {
+  padding-bottom: 30px; }
+  .dealership-locations .locations {
+    display: flex; }
+    @media screen and (max-width: 767px) {
+      .dealership-locations .locations {
+        display: block; } }
+    .dealership-locations .locations .dealerships-contact {
+      width: 45%;
+      margin-right: 120px; }
+      @media screen and (min-width: 1024px) and (max-width: 1230px) {
+        .dealership-locations .locations .dealerships-contact {
+          width: 50%;
+          margin-right: 60px; } }
+      @media screen and (max-width: 1023px) {
+        .dealership-locations .locations .dealerships-contact {
+          width: 100%;
+          margin-right: 0; } }
+      .dealership-locations .locations .dealerships-contact .dealerships {
+        display: flex; }
+        @media screen and (max-width: 767px) {
+          .dealership-locations .locations .dealerships-contact .dealerships {
+            display: block; } }
+        .dealership-locations .locations .dealerships-contact .dealerships .list {
+          width: 50%;
+          margin-right: 30px; }
+          @media screen and (min-width: 767px) and (max-width: 1023px) {
+            .dealership-locations .locations .dealerships-contact .dealerships .list {
+              margin-left: 60px;
+              margin-right: 60px; } }
+          .dealership-locations .locations .dealerships-contact .dealerships .list h3 {
+            margin: 0; }
+          .dealership-locations .locations .dealerships-contact .dealerships .list p {
+            font-weight: 600; }
+          .dealership-locations .locations .dealerships-contact .dealerships .list .state {
+            padding-bottom: 30px; }
+            .dealership-locations .locations .dealerships-contact .dealerships .list .state .location {
+              color: #00aeef;
+              font-size: 24px;
+              font-weight: 700;
+              display: block; }
+      .dealership-locations .locations .dealerships-contact .contact {
+        box-sizing: border-box;
+        margin-top: 30px;
+        padding: 40px 30px 30px 30px;
+        background: url("/atg-stage/assets/img/Contact-Us-CTA-BG.png");
+        background-size: cover;
+        background-position: center center;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 24px; }
+        @media screen and (max-width: 768px) {
+          .dealership-locations .locations .dealerships-contact .contact {
+            padding: 20px;
+            font-size: 18px; } }
+        .dealership-locations .locations .dealerships-contact .contact img {
+          max-width: 100%; }
+        .dealership-locations .locations .dealerships-contact .contact .spacer {
+          height: 4px;
+          width: 60px;
+          background: #ac1f2d;
+          display: block;
+          margin-top: 15px; }
+        .dealership-locations .locations .dealerships-contact .contact a {
+          display: block; }
+        .dealership-locations .locations .dealerships-contact .contact p {
+          margin: 15px 0 0 0; }
+  @media screen and (max-width: 1023px) {
+    .dealership-locations .map {
+      display: none; } }
+  .dealership-locations .map svg {
+    width: 500px;
+    margin-top: -60px; }
+    @media screen and (min-width: 1024px) and (max-width: 1230px) {
+      .dealership-locations .map svg {
+        width: 400px;
+        margin-top: -30px; } }
+    .dealership-locations .map svg .st3 {
+      transition: 0.2s ease-in-out;
+      stroke: #ac1f2d !important;
+      stroke-width: 0px; }
+      .dealership-locations .map svg .st3.active {
+        stroke-width: 15px; }
+        .dealership-locations .map svg .st3.active:before {
+          stroke: #00aeef !important;
+          stroke-width: 15px; }
+
+.affiliates {
+  background: #e1e1e1; }
+  .affiliates .affiliate-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    @media screen and (max-width: 767px) {
+      .affiliates .affiliate-logos {
+        display: block; } }
+    .affiliates .affiliate-logos .logo {
+      flex-basis: 50%; }
+      .affiliates .affiliate-logos .logo:first-of-type {
+        padding-right: 60px; }
+        @media screen and (max-width: 768px) {
+          .affiliates .affiliate-logos .logo:first-of-type {
+            padding-right: 0;
+            padding-bottom: 60px; } }
+      .affiliates .affiliate-logos .logo:last-of-type {
+        padding-left: 60px; }
+        @media screen and (max-width: 768px) {
+          .affiliates .affiliate-logos .logo:last-of-type {
+            padding-left: 0; } }
+      @media screen and (max-width: 768px) {
+        .affiliates .affiliate-logos .logo.align-left, .affiliates .affiliate-logos .logo.align-right {
+          text-align: center !important; } }
+      @media screen and (max-width: 768px) {
+        .affiliates .affiliate-logos .logo img {
+          max-width: 230px; } }

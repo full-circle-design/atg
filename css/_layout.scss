@@ -1,0 +1,176 @@
+body{
+  margin:0;
+  padding:0;
+  font-size:18px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+a{
+  color:$blue;
+  text-decoration: none;
+  transition:$transition;
+  &:hover{
+    color:darken($blue,10%);
+  }
+}
+
+h1,h2,h3{
+  text-transform: uppercase;
+  font-weight:900;
+  color:#000;
+}
+
+h1{
+  font-size:52px; // No h1 style.
+}
+
+h2{
+  font-size:48px;
+  position: relative;
+  margin-top:0;
+  margin-bottom:50px;
+  &:after{
+    content:'';
+    display: block;
+    background:$red;
+    width:$padding;
+    height:4px;
+    position: absolute;
+    left:50%;
+    bottom:-10px;
+    margin-left:-$padding/2;
+  }
+}
+
+h3{
+  font-size:24px;
+}
+
+
+// Utility Helpers
+.padded{
+  padding:$padding;
+  @media screen and (max-width:768px){
+    padding:$padding-mobile*2;
+  }
+}
+.padded-top{
+  padding:$padding 0 0 0;
+  @media screen and (max-width:768px){
+    padding:$padding-mobile*2 0 0 0;
+  }
+}
+.padded-bottom{
+  padding:0 0 $padding 0;
+  @media screen and (max-width:768px){
+    padding:0 0 $padding-mobile*2 0;
+  }
+}
+.padded-2x{padding:$padding*2}
+.padded-2x-top{padding:$padding*2 0 0 0;}
+.padded-2x-bottom{padding:0 0 $padding*2 0;}
+.align-left{text-align:left;}
+.align-center{text-align:center;}
+.align-right{text-align:right}
+
+
+header{
+  .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:$padding-half/2;
+    position: relative;
+    z-index: 200;
+    background:$white;
+    .logo{
+      flex-grow:1;
+      img{
+        width:200px;
+        @media screen and (max-width:768px){
+          width:170px;
+        }
+      }
+    }
+    nav{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style:none;
+      @media screen and (max-width:1024px){
+        display:none;
+      }
+      li{
+        padding-right:$padding-half;
+        &:last-child{
+          padding-right:0;
+        }
+        a{
+          font-weight:700;
+        }
+      }
+    }
+    button{
+      display: none;
+      @media screen and (max-width:1024px){
+        display:block;
+      }
+    }
+  }
+  .nav-mobile{
+    background:$white;
+    position: absolute;
+    top:-100%;
+    left:0;
+    width:100%;
+    padding-top:95px;
+    border-bottom:2px solid #efefef;
+    z-index: 100;
+    transition:0.5s ease-in-out;
+    &.open{
+      top:0;
+    }
+    .nav-item{
+      padding:$padding-mobile 0;
+      text-align: center;
+      border-top:2px solid #efefef;
+      a{
+        font-weight:600;
+      }
+    }
+  }
+}
+
+main{
+  background:url('/atg-stage/assets/img/BG-Texture-Repeatable.png');
+}
+
+
+footer{
+  background:$grey;
+  .legal{
+    border-top:2px solid darken($grey, 10%);
+    p{
+      margin:0;
+      padding:20px 0 $padding-half;
+      font-size:14px;
+    }
+  }
+}
+
+.content{
+  width:$container;
+  margin:0 auto;
+  @media screen and (max-width: $container + $padding){
+    width:100%;
+    padding-left:$padding;
+    padding-right:$padding;
+    box-sizing:border-box;
+  }
+  @media screen and (max-width:768px){
+    width:100%;
+    padding-left:$padding-mobile;
+    padding-right:$padding-mobile;
+    box-sizing:border-box;
+  }
+}

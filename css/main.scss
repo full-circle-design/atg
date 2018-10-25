@@ -1,0 +1,21 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700,900');
+
+// Palette
+$red: #ac1f2d;
+$blue: #00aeef;
+$grey: #e1e1e1;
+$white: #ffffff;
+
+// Vars
+$container: 1170px;
+$transition: 0.15s ease-in-out;
+$padding: 60px;
+$padding-half: $padding/2;
+$padding-mobile: 20px;
+
+// Partials
+@import 'layout';
+@import 'mixin';
+@import 'component';
+@import 'page';
