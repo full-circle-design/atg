@@ -36,4 +36,8 @@ $(document).ready(function(){
     $(this).data("clicks", !clicks);
   });
 
+  $('.locations-link-mobile').click(function() {
+    $('.navicon').click();
+  });
+
 });

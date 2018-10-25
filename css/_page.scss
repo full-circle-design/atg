@@ -1,12 +1,13 @@
 .hero{
   width:100%;
   height:425px;
-  background:url('/atg-stage/assets/img/Hero.jpg');
-  background-size:cover;
+  background:url('/assets/img/Hero.jpg');
+  background-size:cover !important;
   background-position:center center;
   @media screen and (max-width:768px){
     height:350px;
-    background-position:right center;
+    background-position: right center !important;
+    background:url('/assets/img/Hero-mobile.jpg')
   }
 }
 
@@ -33,12 +34,12 @@
     }
     &.brand-freightliner{
       .bg{
-        background:url('/atg-stage/assets/img/Freightliner-Image.jpg');
+        background:url('/assets/img/Freightliner-Image.jpg');
       }
     }
     &.brand-westernstar{
       .bg{
-        background:url('/atg-stage/assets/img/Western-Star-Image.jpg');
+        background:url('/assets/img/Western-Star-Image.jpg');
       }
     }
     .bg{
@@ -122,7 +123,7 @@
         box-sizing:border-box;
         margin-top:$padding-half;
         padding:40px $padding-half $padding-half $padding-half;
-        background:url('/atg-stage/assets/img/Contact-Us-CTA-BG.png');
+        background:url('/assets/img/Contact-Us-CTA-BG.png');
         background-size:cover;
         background-position:center center;
         color:$white;
